@@ -53,10 +53,10 @@
    <!DOCTYPE html>
    <html>
    <head>
-       <title>ทดสอบ Live Server</title>
+       <title>ทดสอบ Namthip Pomhin 115r</title>
    </head>
    <body>
-       <h1>สวัสดี Live Server</h1>
+       <h1>สวัสดี Namthip Pomhin 115</h1>
    </body>
    </html>
    ```
@@ -75,5 +75,6 @@
   
 ### บันทึกผลการทดลอง
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
+![image](https://github.com/user-attachments/assets/fbbf9d81-7819-4dac-a9f2-bd056ba987e3)
 
 
