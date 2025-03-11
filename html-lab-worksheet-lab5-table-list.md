@@ -66,6 +66,8 @@
 1. สร้างตารางแสดงข้อมูลส่วนตัว
 2. สร้างรายการเมนูอาหาร
 
+
+```html
 [<table border="1">
     <thead>
         <tr>
@@ -114,8 +116,6 @@
     <dt>แกงเขียวหวาน</dt>
     <dd>รสชาติหวานเผ็ดนิดๆ</dd>
 </dl>]
-```html
-
 ```
 - ภาพผลลัพธ์:
 [![image](https://github.com/user-attachments/assets/481d8a0b-e964-49fb-8d8d-2a53967f98dc)
