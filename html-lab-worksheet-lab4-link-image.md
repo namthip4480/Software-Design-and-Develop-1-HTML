@@ -165,10 +165,75 @@
 ### บันทึกผลการทดลอง
 - รหัสเอกสาร HTML ที่เขียน:
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>หน้าหลัก</title>
+</head>
+<body>
+    <!-- ส่วนของเนื้อหา -->
+</body>
+</html>
+<nav>
+    <!-- ลิงก์ภายใน - ไปยังหน้าในเว็บไซต์เดียวกัน -->
+    <a href="index.html">หน้าหลัก</a>
+    <a href="pages/about.html">เกี่ยวกับเรา</a>
+    <a href="pages/contact.html">ติดต่อเรา</a>
+    
+    <!-- ลิงก์ภายนอก - เปิดในแท็บใหม่ -->
+    <a href="https://www.google.com" target="_blank">
+        ไปยัง Google
+    </a>
+</nav>
+<!-- สร้างจุดเชื่อมโยง -->
+<section id="top">
+    <h1>เนื้อหาส่วนบน</h1>
+</section>
+
+<section id="products">
+    <h2>สินค้าของเรา</h2>
+</section>
+
+<!-- ลิงก์ไปยังจุดเชื่อมโยง -->
+<a href="#top">กลับด้านบน</a>
+<a href="#products">ไปยังสินค้า</a>
+<!-- ลิงก์อีเมล -->
+<a href="mailto:contact@example.com">ส่งอีเมลหาเรา</a>
+
+<!-- ลิงก์โทรศัพท์ -->
+<a href="tel:+66810045441">โทร 081-004-5441</a>
+
+<!-- ลิงก์ดาวน์โหลด -->
+<a href="https://www.oishigroup.com/beverage/green-tea/" download>
+    ดาวน์โหลดเอกสาร
+</a>
+<!-- รูปภาพในโฟลเดอร์ images -->
+<img src="images/images.png" 
+     alt="โลโก้บริษัท"
+     width="200">
+
+<!-- รูปภาพในโฟลเดอร์ย่อย products -->
+<img src="images/small.jpg" 
+     alt="สินค้าชิ้นที่ 1"
+     width="300"
+     height="200">
+     <figure>
+        <img src="images/products/1650802901790.png" 
+             alt="สินค้าชิ้นที่ 2">
+        <figcaption>
+            รายละเอียดสินค้าชิ้นที่ 2
+        </figcaption>
+    </figure>
+    <a href="images/products/1650802901790.png">
+        <img src="images/products/1650802901790.png" 
+             alt="คลิกเพื่อดูรูปขนาดใหญ่"
+             width="200">
+    </a>]
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[![image](https://github.com/user-attachments/assets/e83a5e3f-363b-4c93-957f-a97acfd9c78f)
+]
 
 
 
