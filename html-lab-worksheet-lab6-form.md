@@ -222,7 +222,9 @@
    - ตรวจสอบขนาดไฟล์รูปภาพ
 
 ### บันทึกผลการทดลอง
-[<!DOCTYPE html>
+
+```html
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
@@ -383,8 +385,6 @@
     </script>
 </body>
 </html>]
-```html
-
 ```
 - ภาพผลลัพธ์:
 ![image](https://github.com/user-attachments/assets/e7092885-23e0-43fb-9b77-2b47e061673c)
