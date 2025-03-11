@@ -387,8 +387,8 @@
 
 ```
 - ภาพผลลัพธ์:
-[![image](https://github.com/user-attachments/assets/3a0b9c70-c168-4136-900a-f1e38c5484c3)
-]
+![image](https://github.com/user-attachments/assets/e7092885-23e0-43fb-9b77-2b47e061673c)
+
 
 
 
