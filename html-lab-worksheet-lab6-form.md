@@ -222,12 +222,173 @@
    - ตรวจสอบขนาดไฟล์รูปภาพ
 
 ### บันทึกผลการทดลอง
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มสมัครสมาชิกร้านค้าออนไลน์</title>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .required-mark {
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <!-- ส่วนข้อมูลส่วนตัว -->
+        <fieldset>
+            <legend>ข้อมูลส่วนตัว</legend>
+            <div class="form-group">
+                <label for="prefix">คำนำหน้า:</label>
+                 <select id="prefix" name="prefix" required>
+                    <option value="">เลือกคำนำหน้า</option>
+                    <option value="mr">นาย</option>
+                    <option value="ms">นางสาว</option>
+                    <option value="mrs">นาง</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">ชื่อ:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">นามสกุล:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">วันเกิด:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+
+            <div class="form-group">
+                <label>เพศ:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">ชาย</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">หญิง</label>
+            </div>
+        </fieldset>
+
+        <!-- ส่วนข้อมูลการติดต่อ -->
+        <fieldset>
+            <legend>ข้อมูลการติดต่อ</legend>
+
+            <div class="form-group">
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">เบอร์โทรศัพท์:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">ที่อยู่จัดส่ง:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+        </fieldset>
+
+        <!-- ส่วนรูปโปรไฟล์ -->
+        <fieldset>
+            <legend>รูปโปรไฟล์</legend>
+            <div class="form-group">
+                <label for="profilePic">เลือกรูปโปรไฟล์:</label>
+                <input type="file" id="profilePic" name="profilePic" accept="image/*" required>
+                <span class="required-mark">*</span>
+            </div>
+        </fieldset>
+
+        <!-- ส่วนการยืนยันรหัสผ่าน -->
+        <fieldset>
+            <legend>การยืนยันรหัสผ่าน</legend>
+
+            <div class="form-group">
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">ยืนยันรหัสผ่าน:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="passError" id="passError" style="color: red; display:none;">
+                    รหัสผ่านไม่ตรงกัน
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- ส่วนความสนใจในหมวดหมู่สินค้า -->
+        <fieldset>
+            <legend>ความสนใจในหมวดหมู่สินค้า</legend>
+
+            <div class="form-group">
+                <label>เลือกหมวดหมู่สินค้า:</label>
+                <input type="checkbox" id="electronics" name="interests" value="electronics">
+                <label for="electronics">อิเล็กทรอนิกส์</label>
+                <input type="checkbox" id="clothing" name="interests" value="clothing">
+                <label for="clothing">เสื้อผ้า</label>
+                <input type="checkbox" id="beauty" name="interests" value="beauty">
+                <label for="beauty">ความงาม</label>
+            </div>
+        </fieldset>
+
+        <!-- ส่วนการยอมรับเงื่อนไขการใช้งาน -->
+        <fieldset>
+            <legend>การยอมรับเงื่อนไข</legend>
+            <div class="form-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">ข้าพเจ้ายอมรับเงื่อนไขการใช้งาน</label>
+            </div>
+        </fieldset>
+
+        <!-- ส่วนการยืนยันข้อมูล -->
+        <fieldset>
+            <legend>การยืนยัน</legend>
+            <div class="form-group">
+                <button type="submit">สมัครสมาชิก</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        // ฟังก์ชั่นตรวจสอบรหัสผ่าน
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+        const passError = document.getElementById('passError');
+
+        confirmPassword.addEventListener('input', function () {
+            if (password.value !== confirmPassword.value) {
+                passError.style.display = 'block';
+            } else {
+                passError.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>]
 ```html
 
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[![image](https://github.com/user-attachments/assets/3a0b9c70-c168-4136-900a-f1e38c5484c3)
+]
 
 
 
